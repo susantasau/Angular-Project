@@ -1,0 +1,30 @@
+form {
+    margin-left: 20%;
+    margin-top: 40px;
+}
+td {
+    padding: 5px;
+    text-align: right;
+}
+
+#sub1{
+    background-color: green;
+    color: white; 
+    width: 100px;   
+}
+#rest1 {
+    background-color: red;
+    color: white;
+    margin-left: 30px;
+    width: 100px;
+}
+button {
+    height: 35px;
+    font-size: 25px;
+}
+
+#signup {
+    width: 120px;
+    color: white;
+    background-color: blue;
+}

@@ -1,0 +1,12 @@
+insert into registration values(
+'Susanta',
+'Sau',
+'6289417660',
+'saususanta200@gmail.com',
+'12-06-1992',
+'Male',
+'susantasau',
+'ss123'
+);
+
+insert into product values(1,'Ganesh Murty',100);

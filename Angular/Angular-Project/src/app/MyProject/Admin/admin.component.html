@@ -1,0 +1,35 @@
+<h1>This is a home page <br />{{ data }}</h1>
+<br />
+<!-- <button *ngIf="ShowHide === 'Show'" (click)="ShowDetails()">{{ShowHide}} Data</button>
+<button *ngIf="ShowHide === 'Hide'" (click)="HideDetails()">{{ShowHide}} Data</button> -->
+<button (click)="ClickEvent()">{{ShowHide}} Data</button>
+<br /><br />
+<table cellpadding="10" cellspacing="1">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Mobile No</th>
+      <th>Email Id</th>
+      <th>Data Of Birth</th>
+      <th>Gender</th>
+      <th>User Name</th>
+      <th>Password</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let row of dataArray">
+        <td>{{row.id}}</td>
+        <td>{{row.first_Name}}</td>
+        <td>{{row.last_Name}}</td>
+        <td>{{row.mobile_No}}</td>
+        <td>{{row.email_Id}}</td>
+        <td>{{row.dob|date:"mediumDate"}}</td>
+        <td>{{row.gender}}</td>
+        <td>{{row.user_Name}}</td>
+        <td>{{row.password}}</td>
+    </tr>
+  </tbody>
+</table>

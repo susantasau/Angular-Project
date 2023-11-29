@@ -1,0 +1,34 @@
+.div1 {
+    /* height: 500px;
+    width: 400px; */
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    /* padding: 10px; */
+}
+
+#divButtton{
+    margin-top: 100px;
+    left: 100px;
+}
+
+#buy {
+    background-color: lawngreen;
+}
+
+#cart {
+    background-color: yellow;
+}
+
+img {
+    width:300px;
+    height:400px;
+}
+
+button {
+    margin-left: 30px;
+    font-size: 20px;
+    color: red;
+    height: 40px;
+    width: 150px;
+}

@@ -1,0 +1,51 @@
+<div>
+  <span class="spanBill">Product name- </span><span class="spanFile">{{ File }}</span><br><br>
+  <span class="spanBill">Price- </span><span class="spanFile">{{ price }}</span>
+</div>
+
+
+<div id="divAddress">
+    <h3>Enter delivery address:-</h3>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label>Enter PIN Code</label>&nbsp;&nbsp;&nbsp;&nbsp;
+    <input type="tel" name="pin" maxlength="6" pattern="[0-9]{6}">
+    &nbsp;&nbsp;&nbsp;&nbsp;<label>House No</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+        &nbsp;&nbsp;&nbsp;&nbsp;<label>Post Office</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;<input type="text">
+    <br><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label>City</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;<select>
+        <option>Select city</option>
+        <option>Pune</option>
+        <option>Ahmadnagar</option>
+        <option>Nashik</option>
+        <option>Nagpur</option>
+        <option>Mumbai</option>
+    </select>
+    &nbsp;&nbsp;&nbsp;&nbsp;<label>State</label>
+    &nbsp;&nbsp;&nbsp;&nbsp;<select>
+        <option>Select state</option>
+        <option>Maharashtra</option>
+        <option>West Bengal</option>
+        <option>Karnataka</option>
+        <option>Telengana</option>
+        <option>Gujrat</option>
+    </select><br>
+</div>
+<div *ngIf="hide">
+    <h3 id="payOpt">Choose your payment option:-</h3>
+    <label><input type="radio" name="payment" value="UPI" checked>UPI</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter UPI Id">
+    <br>
+    <br>
+    <label><input type="radio" name="payment" value="Debit card">Debit Card</label>&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter card no">&nbsp;&nbsp;&nbsp;
+    <label>Validity</label>&nbsp;&nbsp;<input type="date" placeholder="Valid upto">&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter card holder name">&nbsp;&nbsp;&nbsp;
+    <input type="text" placeholder="Enter cvv" id="cvv">
+    <br>
+    <br>
+    <label><input type="radio" name="payment" value="Cash on delivery">Cash on delivery</label>&nbsp;&nbsp;&nbsp;
+    
+</div>
+<button id="btnContinue" (click)="PaymentOption()">{{Continue}}</button>

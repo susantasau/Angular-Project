@@ -1,0 +1,4 @@
+<h1>Hello <span>{{userName}}</span></h1>
+<div *ngFor="let image of path">
+    <a (click)="IndividualProduct(image)"><img [src]="image.image" alt="No Image"></a>
+</div>

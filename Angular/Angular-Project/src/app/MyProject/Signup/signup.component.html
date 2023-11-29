@@ -1,0 +1,59 @@
+<h1>Registartion Form</h1>
+<form #MyForm="ngForm" (ngSubmit)="Submit()">
+    <table>
+        <tr>
+            <td><label>First Name:-</label></td>
+            <td><input type="text" autofocus name="fname" #fname="ngModel" [(ngModel)]="this.MyServe.loginData.first_Name" required></td>
+            <span *ngIf="fname.invalid" [ngClass]="'validator'">Required</span>
+        </tr>
+        <tr>
+            <td><label>Last Name:-</label></td>
+            <td><input type="text" name="lname" #lname="ngModel" [(ngModel)]="this.MyServe.loginData.last_Name" required></td>
+            <span *ngIf="lname.invalid" [ngClass]="'validator'">Required</span>
+        </tr>
+        <tr>
+            <td><label>Mobile No:-</label></td>
+            <td><input type="tel" maxlength="10" pattern="[0-9]{10}" name="mob" #mob="ngModel" [(ngModel)]="this.MyServe.loginData.mobile_No" required></td>
+            <span *ngIf="mob.invalid" [ngClass]="'validator'">Required</span>
+            <!-- <span *ngIf="false" [ngClass]="'validator'">This mobile no already exist</span> -->
+        </tr>
+        <tr>
+            <td><label>Email Id:-</label></td>
+            <td><input type="email" name="emailId" #emailId="ngModel" [(ngModel)]="this.MyServe.loginData.email_Id" required></td>
+            <span *ngIf="emailId.invalid" [ngClass]="'validator'">Required</span>
+            <!-- <span *ngIf="false" [ngClass]="'validator'">This email Id already exist</span> -->
+        </tr>
+        <tr>
+            <td><label>Date of Birth:-</label></td>
+            <td style="text-align: left;"><input type="date" name="dob" #dob="ngModel" [(ngModel)]="this.MyServe.loginData.dob" required></td>
+            <!-- <span *ngIf="dob.invalid" [ngClass]="'validator'">Required</span> -->
+        </tr>
+        <tr>
+            <td><label>Gender:-</label></td>
+            <td style="text-align: left;">
+                <label><input type="radio" name="gen" checked #gen="ngModel" [(ngModel)]="this.MyServe.loginData.gender" value="Male">Male</label>
+                &nbsp;&nbsp;<label><input type="radio" name="gen" #gen="ngModel" [(ngModel)]="this.MyServe.loginData.gender" value="Female">Female</label></td>
+        </tr>
+        <tr>
+            <td><label>User Name:-</label></td>
+            <td><input type="text" name="uname" #uname="ngModel" [(ngModel)]="this.MyServe.loginData.user_Name" required></td>
+            <span *ngIf="uname.invalid" [ngClass]="'validator'">Required</span>
+            <!-- <span *ngIf="false" [ngClass]="'validator'">This User Id already exist</span> -->
+        </tr>
+        <tr>
+            <td><label>Password:-</label></td>
+            <td><input type="password" name="pass" #pass="ngModel" [(ngModel)]="this.MyServe.loginData.password" required></td>
+            <span *ngIf="pass.invalid" [ngClass]="'validator'">Required</span>
+        </tr>
+        <tr>
+            <td><label>Confirm Password:-</label></td>
+            <td><input type="password" name="conpass" #conpass="ngModel" ngModel required></td>
+            <span *ngIf="conpass.invalid" [ngClass]="'validator'">Required</span>
+        </tr>
+        <br><br>
+        <tr>
+            <td><button id="sub1" type="submit" [disabled]="MyForm.invalid" (click)="SubmitData(MyForm)">Submit</button></td>
+            <td><button id="rest1" type="reset" (click)="ResetForm(MyForm)">Reset</button></td>
+        </tr>
+    </table>
+</form>

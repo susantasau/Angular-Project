@@ -1,0 +1,29 @@
+"ConnectionStrings": {
+  "Conn":"Data Source=SUSANTA\\SQLEXPRESS;Initial Catalog=Angular_API;UserID=susantasau;Password=123;TrustServerCertificate=true;"
+},
+
+
+builder.Services.AddDbContext<AngularApiContext>(db=>db.UseSqlServer(builder.Configuration.GetConnectionString("Conn")));
+
+
+
+[HttpGet("{userId}")]
+public async Task<ActionResult<Registration>> GetOne(string userId)
+{ 
+    var r1 = await (from t in _context.Registrations
+         where t.User_Name == userId
+         select new Registration
+         { 
+             Id = t.Id, 
+             First_Name = t.First_Name, 
+             Last_Name = t.Last_Name, 
+             Mobile_No = t.Mobile_No, 
+             Email_Id = t.Email_Id, 
+             Dob = t.Dob, 
+             Gender = t.Gender, 
+             User_Name = t.User_Name, 
+             Password = t.Password 
+         }
+         ).ToListAsync();
+    return r1;
+}

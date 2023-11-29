@@ -1,0 +1,8 @@
+<div id="divNav">
+    <div class="divA"><a routerLink="signup" *ngIf="!LoggedIn()">SignUp</a></div>
+    <div class="divA"><a routerLink="login" *ngIf="!LoggedIn()">Login</a></div>
+    <div class="divA"><a id="logout" routerLink="any" *ngIf="LoggedIn()" (click)="LoggedOut()">Log Out</a></div>       
+    <div class="divA"><a routerLink="">Galary</a></div>
+    <div class="divA"><a routerLink="admin">Admin</a></div>
+    
+  </div>

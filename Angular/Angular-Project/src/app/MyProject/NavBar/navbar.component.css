@@ -1,0 +1,10 @@
+#divNav {margin-left: 50%; width: 50;}
+a {margin: 15px; color: white; font-size: 25px;text-decoration: none;}
+
+.divA {
+    float: right;
+}
+
+#logout :link {
+    text-decoration: aqua;
+}

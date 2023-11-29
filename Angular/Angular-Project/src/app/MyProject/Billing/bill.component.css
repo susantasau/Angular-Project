@@ -1,0 +1,33 @@
+.spanBill {
+    font-size: 15px;
+}
+
+.spanFile
+{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#divAddress
+{
+    padding: 20px;
+}
+
+#btnContinue
+{
+    margin-left: 45%;
+    /* margin-top: 5%; */
+    background-color: green;
+    color: white;
+    height: 40px;
+    font-size: 20px;
+}
+
+#payOpt {
+    margin-left: 20px;
+    color: green;
+}
+
+#cvv {
+    width: 70px;
+}

@@ -1,0 +1,5 @@
+select format(DOB,'dd-MMMM-yyy') from registration;
+delete from Registration;
+dbcc checkident(registration,reseed,0);
+
+select format(GETDATE(),'dd-MM-yyyy') as Date;  To get current date

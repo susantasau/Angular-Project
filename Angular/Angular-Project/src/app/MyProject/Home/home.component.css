@@ -1,0 +1,16 @@
+span {
+    color: red;
+}
+
+div {
+    height: 300px;
+    width: 400px;
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+img {
+    width:400px;
+    height:300px;
+}

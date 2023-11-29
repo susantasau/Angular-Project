@@ -1,0 +1,28 @@
+create table Registration(
+Id int identity(1,1) primary key,
+First_Name varchar(100) not null,
+Last_Name varchar(100) not null,
+Mobile_No varchar(15) not null,
+Email_Id varchar(100) not null,
+DOB date not null,
+Gender varchar(10) not null,
+User_Name varchar(100) not null,
+Password varchar(100) not null
+);
+
+create table Product(
+ProdId int primary key not null,
+ProdName varchar(255) not null,
+Quantity int constraint qty_default_prod default(0)
+);
+
+create table OrderDetails(
+orderId varchar(255) constraint pk_id_order primary key,
+CustomerName varchar(255),
+ProdName varchar(255),
+quantity int,
+TotalPrice decimal(10,2),
+AddressPin  varchar(6),
+Phone  varchar(10),
+PaymentMode varchar(100)
+);
